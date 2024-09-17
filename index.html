@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MagicFood - Abitudini Alimentari Sane e Sostenibili</title>
+    <title>MagicFood - Grow Healthy</title>
     <style>
         :root {
             --primary-color: #4CAF50;
@@ -44,41 +44,20 @@
             z-index: 1000;
         }
         
-        nav {
+        .logo-banner {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px 0;
+            padding: 10px 0;
         }
         
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
+        .logo-banner img {
+            height: 50px; /* Adjust as needed */
+            width: auto;
         }
         
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         h2 {
@@ -122,30 +101,20 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin-bottom: 30px;
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .problem:hover, .solution:hover {
             transform: translateY(-5px);
         }
         
-        .problem, .solution {
-            flex-basis: 48%;
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
         .problem img, .solution img {
             width: auto;
             max-width: 100%;
             height: auto;
-            max-height: 300px; /* Decreased from previous 300px */
+            max-height: 250px;
             margin: 20px 0;
             border-radius: 10px;
         }
@@ -156,17 +125,6 @@
             text-align: center;
         }
         
-        .sustainability {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 80px 0;
-        }
-        
-        .sustainability h2 {
-            color: var(--white);
-        }
-
         .team {
             display: flex;
             justify-content: space-around;
@@ -184,45 +142,11 @@
         }
         
         .team-member img {
-            width: 180px; /* Ingrandito rispetto a 150px */
-            height: 180px; /* Ingrandito rispetto a 150px */
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             margin-bottom: 15px;
             border: 3px solid var(--accent-color);
-        }
-        
-        .psychology {
-            background-color: var(--light-green);
-            padding: 80px 0;
-        }
-        
-        .psychology-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            flex-wrap: wrap;
-        }
-        
-        .psychology-card {
-            flex-basis: 48%;
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .psychology-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .psychology-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
         }
         
         footer {
@@ -233,10 +157,10 @@
         }
         
         @media (max-width: 768px) {
-            .problem-solution, .psychology-content {
+            .problem-solution {
                 flex-direction: column;
             }
-            .problem, .solution, .psychology-card {
+            .problem, .solution {
                 flex-basis: 100%;
             }
         }
@@ -244,15 +168,9 @@
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="logo">MagicFood</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#problem-solution">Problema & Soluzione</a></li>
-                <li><a href="#psychology">Psicologia</a></li>
-                <li><a href="#team">Team</a></li>
-            </ul>
-        </nav>
+        <div class="logo-banner">
+            <img src="./images/Logo.png" alt="MagicFood - Grow Healthy">
+        </div>
     </header>
 
     <section id="home" class="hero">
@@ -262,47 +180,19 @@
         </div>
     </section>
 
-<section id="problem-solution">
+    <section id="problem-solution">
         <div class="container">
             <h2>Il Nostro Approccio</h2>
             <div class="problem-solution">
                 <div class="problem">
                     <h3>Il Problema</h3>
                     <img src="./images/Statistiche.png" alt="Bambini che mangiano cibo non sano">
-                    <p>Adulti e bambini non consumano quotidianamente abbastanza frutta e verdura, portando a problemi di sovrappeso e salute.</p>
+                    <p>1 su 3 adulti e il 24,3% dei bambini non consumano quotidianamente frutta e verdura, portando a problemi di sovrappeso e salute.</p>
                 </div>
                 <div class="solution">
                     <h3>La Nostra Soluzione</h3>
                     <img src="./images/Prototipo.png" alt="Bambini che usano il dispositivo MagicFood">
                     <p>Un dispositivo interattivo per bambini basato su principi psicologici e gamification, che incoraggia abitudini alimentari sane attraverso il gioco e le sfide familiari.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-    <section id="psychology" class="psychology">
-        <div class="container">
-            <h2>La Psicologia dietro MagicFood</h2>
-            <div class="psychology-content">
-                <div class="psychology-card">
-                    <h3>Condizionamento Operante</h3>
-                    <p>Utilizziamo rinforzi positivi per incoraggiare comportamenti alimentari sani, premiando le scelte salutari dei bambini.</p>
-                </div>
-                <div class="psychology-card">
-                    <h3>Apprendimento per Imitazione</h3>
-                    <p>I bambini imparano osservando i genitori e i personaggi nelle nostre storie, creando modelli positivi da seguire.</p>
-                </div>
-                <div class="psychology-card">
-                    <h3>Token Economy</h3>
-                    <p>Offriamo piccoli premi per ogni porzione di frutta o verdura consumata, che possono essere scambiati con premi più grandi.</p>
-                </div>
-                <div class="psychology-card">
-                    <h3>Gamification</h3>
-                    <p>Trasformiamo l'alimentazione sana in un gioco divertente e una sfida familiare, rendendo l'esperienza coinvolgente e motivante.</p>
                 </div>
             </div>
         </div>
