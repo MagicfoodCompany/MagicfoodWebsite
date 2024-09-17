@@ -52,7 +52,7 @@
         }
         
         .logo-banner img {
-            height: 50px; /* Adjust as needed */
+            height: 50px;
             width: auto;
         }
         
@@ -125,6 +125,51 @@
             text-align: center;
         }
         
+        .sustainability {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .sustainability h2 {
+            color: var(--white);
+        }
+        
+        .psychology {
+            background-color: var(--light-green);
+            padding: 80px 0;
+        }
+        
+        .psychology-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        
+        .psychology-card {
+            flex-basis: 48%;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .psychology-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .psychology-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
         .team {
             display: flex;
             justify-content: space-around;
@@ -157,10 +202,10 @@
         }
         
         @media (max-width: 768px) {
-            .problem-solution {
+            .problem-solution, .psychology-content {
                 flex-direction: column;
             }
-            .problem, .solution {
+            .problem, .solution, .psychology-card {
                 flex-basis: 100%;
             }
         }
@@ -193,6 +238,37 @@
                     <h3>La Nostra Soluzione</h3>
                     <img src="./images/Prototipo.png" alt="Bambini che usano il dispositivo MagicFood">
                     <p>Un dispositivo interattivo per bambini basato su principi psicologici e gamification, che incoraggia abitudini alimentari sane attraverso il gioco e le sfide familiari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <h2>Sostenibilità</h2>
+            <p>MagicFood si impegna per un futuro sostenibile, promuovendo abitudini alimentari che non solo migliorano la salute dei bambini, ma anche quella del nostro pianeta.</p>
+        </div>
+    </section>
+
+    <section id="psychology" class="psychology">
+        <div class="container">
+            <h2>La Psicologia dietro MagicFood</h2>
+            <div class="psychology-content">
+                <div class="psychology-card">
+                    <h3>Condizionamento Operante</h3>
+                    <p>Utilizziamo rinforzi positivi per incoraggiare comportamenti alimentari sani, premiando le scelte salutari dei bambini.</p>
+                </div>
+                <div class="psychology-card">
+                    <h3>Apprendimento per Imitazione</h3>
+                    <p>I bambini imparano osservando i genitori e i personaggi nelle nostre storie, creando modelli positivi da seguire.</p>
+                </div>
+                <div class="psychology-card">
+                    <h3>Token Economy</h3>
+                    <p>Offriamo piccoli premi per ogni porzione di frutta o verdura consumata, che possono essere scambiati con premi più grandi.</p>
+                </div>
+                <div class="psychology-card">
+                    <h3>Gamification</h3>
+                    <p>Trasformiamo l'alimentazione sana in un gioco divertente e una sfida familiare, rendendo l'esperienza coinvolgente e motivante.</p>
                 </div>
             </div>
         </div>
